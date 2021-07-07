@@ -10,6 +10,14 @@
 
 .header__logo {
   margin-right: 90px;
+  @media screen and (min-width: 100px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 }
 
 .logo__item-header {
