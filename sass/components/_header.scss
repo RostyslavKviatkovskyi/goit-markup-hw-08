@@ -132,3 +132,14 @@
     bottom: -1px;
   }
 }
+
+.nav-button {
+  padding: 0;
+  border: none;
+  background-color: #ffffff;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
