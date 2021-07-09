@@ -17,6 +17,11 @@
   transform: translate(-50%, -50%);
   background-color: var(--background-color);
   padding: 40px;
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 .modal-close-btn {
@@ -125,6 +130,9 @@
     margin-right: 7px;
     border-radius: 2px;
   }
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    font-size: 12px;
+  }
 }
 
 .modal-form-term:checked + .modal-form__check-desk::before {
@@ -161,6 +169,9 @@
   justify-content: center;
   display: flex;
   margin-bottom: 12px;
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .modal-form__field {

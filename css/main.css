@@ -103,11 +103,17 @@ body {
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 1199px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .filters-list {
     justify-content: left;
     flex-wrap: wrap;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filters-list {
+    margin-bottom: 30px;
   }
 }
 
@@ -411,6 +417,7 @@ body {
   top: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 }
 
 .mobile-nav .container {
@@ -424,7 +431,7 @@ body {
 }
 
 .mobile-nav .is-hidden {
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
 }
 
@@ -1443,6 +1450,13 @@ body {
   padding: 40px;
 }
 
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
 .modal-close-btn {
   top: 8px;
   right: 8px;
@@ -1550,6 +1564,12 @@ body {
   border-radius: 2px;
 }
 
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal-form__check-desk {
+    font-size: 12px;
+  }
+}
+
 .modal-form-term:checked + .modal-form__check-desk::before {
   background-image: url("../images/modal/icon-check.svg");
   background-position: center;
@@ -1583,6 +1603,12 @@ body {
   justify-content: center;
   display: flex;
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal-title {
+    text-align: center;
+  }
 }
 
 .modal-form__field {
