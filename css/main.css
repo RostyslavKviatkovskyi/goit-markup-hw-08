@@ -366,21 +366,6 @@ body {
   color: var(--accent-color);
 }
 
-.current {
-  color: var(--accent-color);
-}
-
-.current::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
-  left: 0;
-  bottom: -1px;
-}
-
 .menu-open {
   padding: 0;
   border: none;
@@ -474,6 +459,21 @@ body {
   text-decoration: none;
 }
 
+.current {
+  color: var(--accent-color);
+}
+
+.current::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  left: 0;
+  bottom: -1px;
+}
+
 .mobile-menu__link:hover,
 .mobile-menu__link:focus {
   color: var(--accent-color);
@@ -536,21 +536,21 @@ body {
   margin: 0 auto;
 }
 
-@media (min-device-pixel-ratio: 2) and (min-width: 480px), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero .box {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg.jpg");
+@media screen and (min-width: 480px), (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg_2x.jpg");
   }
 }
 
-@media (min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero .box {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg.jpg");
+@media screen and (min-width: 768px), (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg_2x.jpg");
   }
 }
 
-@media (min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero .box {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg.jpg");
+@media screen and (min-width: 1200px), (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg_2x.jpg");
   }
 }
 
@@ -1330,7 +1330,7 @@ body {
   line-height: 1.55;
   color: var(--background-color);
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
   background: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
@@ -1354,6 +1354,7 @@ body {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   background: var(--background-color);
+  flex-grow: 1;
 }
 
 .projects__item {
@@ -1385,6 +1386,9 @@ body {
 
 .projects__item-link {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .projects__item-link:hover, .projects__item-link:focus {
